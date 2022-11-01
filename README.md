@@ -1,4 +1,4 @@
-# MicrodosisApp
+# AutoscopiaApp
 An app to display the content of the book "Autoscopia", by Jo Almeyra.
 
 Frustrated with the editorial industry, she decided to publish her own books, and went on to explore different media. I helped her with a digital version. 
