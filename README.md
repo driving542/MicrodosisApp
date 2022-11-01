@@ -3,9 +3,7 @@ An app to display the content of the book "Autoscopia", by Jo Almeyra.
 
 Frustrated with the editorial industry, she decided to publish her own books, and went on to explore different media. I helped her with a digital version. 
 
-This app contains a collection of poems called "Autoscopia". 
-
-The user will be able to read the poems, by turning pages. This app/book has the following features:
+This app contains a collection of poems called "Autoscopia". The user will be able to read the poems, by turning pages. This app/book has the following features:
 
 1. A "Favorites" feature, that will allow the reader/user to bookmark certain poems, and have them in a list. 
 2. A "Bookmark" feature, to mark a desired page and the option to navigate there directly. 
