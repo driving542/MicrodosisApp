@@ -1,8 +1,8 @@
 import PoemPageDisplay from "../components/PoemPageDisplay";
 
-const FavoriteCarrouselScreen = ({ route, navigation }) => {
+const FavoriteDisplayScreen = ({ route }) => {
   const favPoem = route.params.poem;
   return <PoemPageDisplay item={favPoem} />;
 };
 
-export default FavoriteCarrouselScreen;
+export default FavoriteDisplayScreen;

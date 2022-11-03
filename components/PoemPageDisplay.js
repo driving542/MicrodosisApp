@@ -1,4 +1,3 @@
-import { POEMS } from "../shared/POEMS";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 import { Icon } from "react-native-elements";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +5,6 @@ import {
   addFavorite,
   removeFavorite,
 } from "../features/favorites/favoritesSlice";
-import { useState } from "react";
 import { makeBookmark } from "../features/bookmark/bookmarksSlice";
 
 const PoemPageDisplay = ({ item }) => {

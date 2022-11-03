@@ -1,24 +1,31 @@
 import HomeScreen from "./screens/HomeScreen";
+import BookContentScreen from "./screens/BookContentScreen";
+import FavoritesScreen from "./screens/FavoritesScreen";
+import FavoriteDisplayScreen from "./screens/FavoriteDisplayScreen";
+import IndexScreen from "./screens/IndexScreen";
+import IndexedScreen from "./screens/IndexedScreen";
+import AboutScreen from "./screens/AboutScreen";
 import { createStackNavigator } from "@react-navigation/stack";
-import PoemCardScreen from "./screens/PoemCardScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import AboutScreen from "./screens/AboutScreen";
-import FavoritesScreen from "./screens/FavoritesScreen";
-import FullIndexScreen from "./screens/FullIndexScreen";
-import FavoriteCarrouselScreen from "./screens/FavoriteCarrouselScreen";
-import IndexShelf from "./screens/IndexShelf";
-import IndexedScreen from "./screens/IndexedScreen";
-//imports for redux
+import { Icon } from "react-native-elements";
+//redux
 import { Provider } from "react-redux";
-import { favoritesReducer } from "./features/favorites/favoritesSlice";
 import { store } from "./redux/store";
+//fonts
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-import { Icon } from "react-native-elements";
 
 const Drawer = createDrawerNavigator();
+
+const drawerContentOptions = {
+  activeBackgroundColor: "#FCD299",
+  activeTintColor: "#575551",
+  labelStyle: {
+    fontFamily: "IBM-bold",
+  },
+};
 
 const iconStyle = {
   marginLeft: 10,
@@ -57,7 +64,7 @@ const HomeNavigator = () => {
       />
       <Stack.Screen
         name="Autoscopia"
-        component={FullIndexScreen}
+        component={BookContentScreen}
         screenOptions={screenOptions}
         options={({ navigation }) => ({
           title: "Autoscopia",
@@ -65,11 +72,7 @@ const HomeNavigator = () => {
             <Icon
               name="chevron-left"
               type="font-awesome"
-              iconStyle={{
-                marginLeft: 10,
-                color: "#fff",
-                fontSize: 24,
-              }}
+              iconStyle={iconStyle}
               onPress={() => navigation.goBack()}
             />
           ),
@@ -79,13 +82,16 @@ const HomeNavigator = () => {
   );
 };
 
-const FullIndexScreenNavigator = () => {
+const BookContentScreenNavigator = () => {
   const Stack = createStackNavigator();
   return (
-    <Stack.Navigator initialRouteName="FullIndex" screenOptions={screenOptions}>
+    <Stack.Navigator
+      initialRouteName="BookContent"
+      screenOptions={screenOptions}
+    >
       <Stack.Screen
         name="Autoscopia"
-        component={FullIndexScreen}
+        component={BookContentScreen}
         options={({ navigation }) => ({
           title: "Autoscopia",
           headerLeft: () => (
@@ -110,7 +116,7 @@ const FavoritesScreenNavigator = () => {
         name="Favorites"
         component={FavoritesScreen}
         options={({ navigation }) => ({
-          title: "Favoritos",
+          title: "Favorites",
           headerLeft: () => (
             <Icon
               name="chevron-left"
@@ -122,10 +128,10 @@ const FavoritesScreenNavigator = () => {
         })}
       />
       <Stack.Screen
-        name="FavoriteCarrouselScreen"
-        component={FavoriteCarrouselScreen}
+        name="FavoriteDisplayScreen"
+        component={FavoriteDisplayScreen}
         options={({ navigation }) => ({
-          title: "Favoritos",
+          title: "Favorites",
           headerLeft: () => (
             <Icon
               name="chevron-left"
@@ -169,7 +175,7 @@ const IndexNavigator = () => {
     <Stack.Navigator screenOptions={screenOptions}>
       <Stack.Screen
         name="Index"
-        component={IndexShelf}
+        component={IndexScreen}
         options={({ navigation }) => ({
           headerLeft: () => (
             <Icon
@@ -225,13 +231,7 @@ export default function App() {
             initialRouteName="Home"
             drawerStyle={{ backgroundColor: "#fff" }}
             drawerType="back"
-            drawerContentOptions={{
-              activeBackgroundColor: "#FCD299",
-              activeTintColor: "#575551",
-              labelStyle: {
-                fontFamily: "IBM-bold",
-              },
-            }}
+            drawerContentOptions={drawerContentOptions}
           >
             <Drawer.Screen
               name="Home"
@@ -239,17 +239,17 @@ export default function App() {
               options={{ Title: "Home" }}
             />
             <Drawer.Screen
-              name="FullIndex"
-              component={FullIndexScreenNavigator}
+              name="BookContent"
+              component={BookContentScreenNavigator}
               options={{ title: "Autoscopia" }}
             />
             <Drawer.Screen
-              name="IndexShelf"
+              name="IndexScreen"
               component={IndexNavigator}
               options={{ title: "Index" }}
             />
             <Drawer.Screen
-              name="Favorites"
+              name="FavoritesScreenNavigator"
               component={FavoritesScreenNavigator}
               options={{ title: "Favorites" }}
             />

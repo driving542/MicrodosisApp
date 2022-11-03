@@ -2,8 +2,9 @@ import { View, StyleSheet, Dimensions } from "react-native";
 import { Button } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
+import { titles } from "../shared/PoemsSlice";
 
-const IndexShelf = ({ route }) => {
+const IndexScreen = () => {
   const navigation = useNavigation();
   const bookmarkedPage = useSelector((state) => state.bookmarkedPoem.ids);
 
@@ -13,7 +14,7 @@ const IndexShelf = ({ route }) => {
         buttonStyle={styles.buttonStyle}
         type="outline"
         titleStyle={styles.buttonTitleStyle}
-        title="Horas que"
+        title={titles[1].titulo}
         onPress={() => {
           navigation.navigate("IndexedScreen", {
             initialPage: 2,
@@ -24,7 +25,7 @@ const IndexShelf = ({ route }) => {
         buttonStyle={styles.buttonStyle}
         type="outline"
         titleStyle={styles.buttonTitleStyle}
-        title="Círculos"
+        title={titles[2].titulo}
         onPress={() => {
           navigation.navigate("IndexedScreen", {
             initialPage: 6,
@@ -35,7 +36,7 @@ const IndexShelf = ({ route }) => {
         buttonStyle={styles.buttonStyle}
         type="outline"
         titleStyle={styles.buttonTitleStyle}
-        title="Días que"
+        title={titles[3].titulo}
         onPress={() => {
           navigation.navigate("IndexedScreen", {
             initialPage: 9,
@@ -46,7 +47,7 @@ const IndexShelf = ({ route }) => {
         buttonStyle={styles.buttonStyle}
         type="outline"
         titleStyle={styles.buttonTitleStyle}
-        title="Rombos"
+        title={titles[4].titulo}
         onPress={() => {
           navigation.navigate("IndexedScreen", {
             initialPage: 12,
@@ -68,7 +69,6 @@ const IndexShelf = ({ route }) => {
           navigation.navigate("IndexedScreen", {
             initialPage: bookmarkedPage,
           });
-          console.log("Button pressed!");
         }}
       />
     </View>
@@ -96,4 +96,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default IndexShelf;
+export default IndexScreen;

@@ -1,46 +1,47 @@
 import { View, StyleSheet, Dimensions } from "react-native";
 import { useSelector } from "react-redux";
 import { Button } from "react-native-elements";
+import { titles } from "../shared/PoemsSlice";
 
 const IndexPage = ({ setIndex }) => {
   const bookmarkedPage = useSelector((state) => state.bookmarkedPoem.ids);
 
   return (
-    <View style={styles.FlatListContainer}>
+    <View style={styles.flatListContainer}>
       <Button
         buttonStyle={styles.buttonStyle}
         type="outline"
         titleStyle={styles.buttonTitleStyle}
-        title="Horas que"
+        title={titles[1].titulo}
         onPress={() => {
-          setIndex(2);
+          setIndex(titles[1].page);
         }}
       />
       <Button
         buttonStyle={styles.buttonStyle}
         type="outline"
         titleStyle={styles.buttonTitleStyle}
-        title="Círculos"
+        title={titles[2].titulo}
         onPress={() => {
-          setIndex(6);
+          setIndex(titles[2].page);
         }}
       />
       <Button
         buttonStyle={styles.buttonStyle}
         type="outline"
         titleStyle={styles.buttonTitleStyle}
-        title="Días que"
+        title={titles[3].titulo}
         onPress={() => {
-          setIndex(9);
+          setIndex(titles[3].page);
         }}
       />
       <Button
         buttonStyle={styles.buttonStyle}
         type="outline"
         titleStyle={styles.buttonTitleStyle}
-        title="Rombos"
+        title={titles[4].titulo}
         onPress={() => {
-          setIndex(12);
+          setIndex(titles[4].page);
         }}
       />
       <Button
@@ -63,7 +64,7 @@ const IndexPage = ({ setIndex }) => {
 };
 
 const styles = StyleSheet.create({
-  FlatListContainer: {
+  flatListContainer: {
     marginVertical: 0,
     width: Dimensions.get("window").width,
     height: Dimensions.get("screen").length,

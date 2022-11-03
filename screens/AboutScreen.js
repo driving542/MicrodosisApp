@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import CustomCard from "../UI/CustomCard";
 import * as Animatable from "react-native-animatable";
 

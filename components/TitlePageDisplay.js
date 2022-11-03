@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
   },
   titulo: {
-    // paddingTop: "10%",
     paddingHorizontal: "15%",
     color: "#fff",
     fontSize: 20,

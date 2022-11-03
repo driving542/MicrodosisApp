@@ -1,8 +1,8 @@
-import NewFull from "../components/NewFull";
+import BookContent from "../components/BookContent";
 
-const IndexedScreen = ({ route, navigation }) => {
+const IndexedScreen = ({ route }) => {
   const initialPage = route.params.initialPage;
-  return <NewFull initialPage={initialPage} />;
+  return <BookContent initialPage={initialPage} />;
 };
 
 export default IndexedScreen;

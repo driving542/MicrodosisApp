@@ -3,19 +3,17 @@ import {
   Text,
   FlatList,
   StyleSheet,
-  PanResponder,
   Alert,
   TouchableOpacity,
 } from "react-native";
 import { Avatar, ListItem, Icon } from "react-native-elements";
 import { useSelector, useDispatch } from "react-redux";
 import { POEMS } from "../shared/POEMS";
-import { addFavorite } from "../features/favorites/favoritesSlice";
 import CustomCard from "../UI/CustomCard";
 import * as Animatable from "react-native-animatable";
-import PoemPageDisplay from "../components/PoemPageDisplay";
 import { SwipeRow } from "react-native-swipe-list-view";
 import { removeFavorite } from "../features/favorites/favoritesSlice";
+import FavoriteDisplayScreen from "./FavoriteDisplayScreen";
 
 const FavoritesScreen = ({ navigation }) => {
   const favoritePoemPages = useSelector((state) => state.favoritePoems.ids);
@@ -27,10 +25,6 @@ const FavoritesScreen = ({ navigation }) => {
   );
 
   const renderFavoritePoem = ({ item: poem }) => {
-    // const displayFavorite = () => {
-    //   navigation.navigate("Favoritos");
-    // };
-
     return (
       <SwipeRow rightOpenValue={-100}>
         <View style={styles.deleteView}>
@@ -61,7 +55,7 @@ const FavoritesScreen = ({ navigation }) => {
         <View>
           <ListItem
             onPress={() => {
-              navigation.navigate("FavoriteCarrouselScreen", {
+              navigation.navigate("FavoriteDisplayScreen", {
                 poem: poem,
               });
             }}
@@ -139,7 +133,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 16,
     width: 100,
-    fontFamily: "IBM-regular",
+    fontFamily: "IBM-bold",
   },
 });
 

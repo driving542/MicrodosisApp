@@ -3,23 +3,10 @@ import { Button } from "react-native-elements";
 import CustomCard from "../UI/CustomCard";
 
 const HomeScreen = ({ navigation }) => {
-  // const ButtonHandler = () => {
-  //   navigation.navigate("Full")
-  // };
-
   return (
     <CustomCard>
       <Image source={require("../assets/images/label.gif")} />
-      <Text
-        style={{
-          fontFamily: "IBM-regular",
-          paddingHorizontal: 40,
-          marginBottom: 20,
-          fontSize: 15,
-        }}
-      >
-        Majo Almeyra
-      </Text>
+      <Text style={styles.Text}>Majo Almeyra</Text>
       <Button
         title="Get started"
         buttonStyle={styles.buttonStyle}
@@ -32,6 +19,12 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  Text: {
+    fontFamily: "IBM-regular",
+    paddingHorizontal: 40,
+    marginBottom: 20,
+    fontSize: 15,
+  },
   buttonStyle: {
     borderColor: "#000",
     borderWidth: 1,
