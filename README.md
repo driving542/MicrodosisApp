@@ -12,11 +12,13 @@ This app contains a collection of poems called "Autoscopia". The user will be ab
 This project was built using React Native, and the following frameworks for its features: 
 
  - Redux
+ - React Navigation
  - Animatable
  - React-native-swipe-list-view
- - React Navigation
  - Expo Font
- - FlatIcons by FreePik <a href="https://www.flaticon.com/free-icons/rhombus" title="rhombus icons">Rhombus icons created by Freepik - Flaticon</a>
+ 
+ 
+ Icons provided by FlatIcons by FreePik <a href="https://www.flaticon.com/free-icons/rhombus" title="rhombus icons">All icons created by Freepik - Flaticon</a>
 
 
 The poems themselves are written in Spanish, but for presentation purposes, the app's navigation, menus, and some screens, are in English. English version of the poems will come soon (I'll ask Jo to translate them). 
