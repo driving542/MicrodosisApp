@@ -6,14 +6,13 @@ import {
   Alert,
   TouchableOpacity,
 } from "react-native";
-import { Avatar, ListItem, Icon } from "react-native-elements";
+import { Avatar, ListItem } from "react-native-elements";
 import { useSelector, useDispatch } from "react-redux";
 import { POEMS } from "../shared/POEMS";
 import CustomCard from "../UI/CustomCard";
 import * as Animatable from "react-native-animatable";
 import { SwipeRow } from "react-native-swipe-list-view";
 import { removeFavorite } from "../features/favorites/favoritesSlice";
-import FavoriteDisplayScreen from "./FavoriteDisplayScreen";
 
 const FavoritesScreen = ({ navigation }) => {
   const favoritePoemPages = useSelector((state) => state.favoritePoems.ids);

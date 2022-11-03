@@ -9,7 +9,7 @@ const IndexScreen = () => {
   const bookmarkedPage = useSelector((state) => state.bookmarkedPoem.ids);
 
   return (
-    <View style={styles.View}>
+    <View style={styles.view}>
       <Button
         buttonStyle={styles.buttonStyle}
         type="outline"
@@ -76,9 +76,9 @@ const IndexScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  View: {
+  view: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#FAFAFA",
     marginVertical: 0,
     width: Dimensions.get("window").width,
     height: Dimensions.get("screen").length,

@@ -34,7 +34,7 @@ export const POEMS = [
   {
     titulo: "Horas que",
     subtitulo: "04:02",
-    cuerpo: "Ocupo espacio. Ocupo espacio. Ocupo espacio",
+    cuerpo: "Ocupo espacio. \nOcupo espacio. \nOcupo espacio",
     id: 3,
     page: 4,
     image: require("../assets/images/clock1.png"),
@@ -60,7 +60,7 @@ export const POEMS = [
     titulo: "Círculos",
     subtitulo: "__ / __ / __",
     cuerpo:
-      "Mi seria suerte destinar varios momentos cada hora en arrepentirme.",
+      "Mi seria suerte \ndestinar varios momentos cada hora \nen arrepentirme.",
     id: 4,
     page: 7,
     image: require("../assets/images/circle.png"),
@@ -86,7 +86,7 @@ export const POEMS = [
     titulo: "Días que",
     subtitulo: "8/8",
     cuerpo:
-      "Miramos el celeste desconcertados. \nNuestra imagen se volvía sinuosa\n y aparecían puntos violetas\n donde antes estaba el sol.\n Mi fuerte caída se anticipaba \nen las baldosas rotas. \nQué lindo es \ncuando me acompañás a casa.",
+      "Miramos el celeste desconcertados. \nNuestra imagen se volvía sinuosa\ny aparecían puntos violetas\ndonde antes estaba el sol.\nMi fuerte caída se anticipaba \nen las baldosas rotas. \nQué lindo es \ncuando me acompañás a casa.",
     id: 6,
     page: 10,
     image: require("../assets/images/day.png"),

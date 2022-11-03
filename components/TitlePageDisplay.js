@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   titulo: {
     paddingHorizontal: "15%",
-    color: "#fff",
+    color: "#FAFAFA",
     fontSize: 20,
     fontFamily: "IBM-bold-italic",
   },

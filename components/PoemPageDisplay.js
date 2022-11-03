@@ -29,8 +29,8 @@ const PoemPageDisplay = ({ item }) => {
   return (
     <View style={styles.view}>
       <View style={styles.textview}>
-        <Text style={styles.text}>{item.subtitulo}</Text>
-        <Text style={styles.text}>{item.cuerpo}</Text>
+        <Text style={styles.text1}>{item.subtitulo}</Text>
+        <Text style={styles.text2}>{item.cuerpo}</Text>
       </View>
       <View style={styles.poemicons}>
         <Icon
@@ -51,48 +51,37 @@ const PoemPageDisplay = ({ item }) => {
 
 const styles = StyleSheet.create({
   view: {
-    backgroundColor: "#fff",
     flex: 1,
+    backgroundColor: "#FAFAFA",
     width: Dimensions.get("window").width,
+    height: Dimensions.get("screen").length,
     display: "flex",
     flexDirection: "column",
-    height: Dimensions.get("screen").length,
   },
   textview: {
     flex: 5,
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
   },
-  viewtitulo: {
-    backgroundColor: "#000",
-    flex: 1,
-    width: Dimensions.get("window").width,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-evenly",
-    height: Dimensions.get("screen").length,
-  },
-  FlatListContainer: {
-    marginVertical: 0,
-  },
-  text: {
+  text1: {
     paddingHorizontal: "15%",
     paddingVertical: "15%",
+
     fontFamily: "IBM-regular",
+    fontSize: 0.045 * Dimensions.get("window").width,
   },
-  titulo: {
-    paddingTop: "10%",
+  text2: {
     paddingHorizontal: "15%",
-    color: "#fff",
-    fontSize: 20,
-    fontFamily: "IBM-italic",
+    fontFamily: "IBM-regular",
+    fontSize: 0.04 * Dimensions.get("window").width,
   },
   poemicons: {
     display: "flex",
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-evenly",
+    alignItems: "flex-end",
+    paddingBottom: "8%",
   },
 });
 

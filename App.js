@@ -29,14 +29,14 @@ const drawerContentOptions = {
 
 const iconStyle = {
   marginLeft: 10,
-  color: "#fff",
+  color: "#FAFAFA",
   fontSize: 24,
 };
 const screenOptions = {
   headerStyle: {
     backgroundColor: "#FF760D",
   },
-  headerTintColor: "#fff",
+  headerTintColor: "#FAFAFA",
   headerTitleStyle: {
     fontFamily: "IBM-bold",
   },
@@ -229,7 +229,7 @@ export default function App() {
         >
           <Drawer.Navigator
             initialRouteName="Home"
-            drawerStyle={{ backgroundColor: "#fff" }}
+            drawerStyle={{ backgroundColor: "#FAFAFA" }}
             drawerType="back"
             drawerContentOptions={drawerContentOptions}
           >

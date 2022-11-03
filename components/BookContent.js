@@ -55,7 +55,7 @@ const BookContent = ({ initialPage }) => {
 
 const styles = StyleSheet.create({
   view: {
-    backgroundColor: "#fff",
+    backgroundColor: "#FAFAFA",
     flex: 1,
     width: Dimensions.get("window").width,
     display: "flex",

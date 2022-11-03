@@ -6,7 +6,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <CustomCard>
       <Image source={require("../assets/images/label.gif")} />
-      <Text style={styles.Text}>Majo Almeyra</Text>
+      <Text style={styles.Text}>A book of poems by Majo Almeyra</Text>
       <Button
         title="Get started"
         buttonStyle={styles.buttonStyle}
