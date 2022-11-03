@@ -9,76 +9,76 @@ const IndexShelf = ({ route }) => {
 
   return (
     <View style={styles.View}>
-      <View style={styles.FlatListContainer}>
-        <Button
-          buttonStyle={styles.buttonStyle}
-          type="outline"
-          titleStyle={styles.buttonTitleStyle}
-          title="Horas que"
-          onPress={() => {
-            navigation.navigate("IndexedScreen", {
-              initialPage: 2,
-            });
-          }}
-        />
-        <Button
-          buttonStyle={styles.buttonStyle}
-          type="outline"
-          titleStyle={styles.buttonTitleStyle}
-          title="Círculos"
-          onPress={() => {
-            navigation.navigate("IndexedScreen", {
-              initialPage: 6,
-            });
-          }}
-        />
-        <Button
-          buttonStyle={styles.buttonStyle}
-          type="outline"
-          titleStyle={styles.buttonTitleStyle}
-          title="Días que"
-          onPress={() => {
-            navigation.navigate("IndexedScreen", {
-              initialPage: 9,
-            });
-          }}
-        />
-        <Button
-          buttonStyle={styles.buttonStyle}
-          type="outline"
-          titleStyle={styles.buttonTitleStyle}
-          title="Rombos"
-          onPress={() => {
-            navigation.navigate("IndexedScreen", {
-              initialPage: 12,
-            });
-          }}
-        />
-        <Button
-          buttonStyle={styles.buttonStyle}
-          type="outline"
-          titleStyle={styles.buttonTitleStyle}
-          title="My Bookmark"
-          icon={{
-            name: "bookmark-o",
-            type: "font-awesome",
-            color: "#000",
-            paddingHorizontal: 10,
-          }}
-          onPress={() => {
-            navigation.navigate("Autoscopia", {
-              index: bookmarkedPage,
-            });
-          }}
-        />
-      </View>
+      <Button
+        buttonStyle={styles.buttonStyle}
+        type="outline"
+        titleStyle={styles.buttonTitleStyle}
+        title="Horas que"
+        onPress={() => {
+          navigation.navigate("IndexedScreen", {
+            initialPage: 2,
+          });
+        }}
+      />
+      <Button
+        buttonStyle={styles.buttonStyle}
+        type="outline"
+        titleStyle={styles.buttonTitleStyle}
+        title="Círculos"
+        onPress={() => {
+          navigation.navigate("IndexedScreen", {
+            initialPage: 6,
+          });
+        }}
+      />
+      <Button
+        buttonStyle={styles.buttonStyle}
+        type="outline"
+        titleStyle={styles.buttonTitleStyle}
+        title="Días que"
+        onPress={() => {
+          navigation.navigate("IndexedScreen", {
+            initialPage: 9,
+          });
+        }}
+      />
+      <Button
+        buttonStyle={styles.buttonStyle}
+        type="outline"
+        titleStyle={styles.buttonTitleStyle}
+        title="Rombos"
+        onPress={() => {
+          navigation.navigate("IndexedScreen", {
+            initialPage: 12,
+          });
+        }}
+      />
+      <Button
+        buttonStyle={styles.buttonStyle}
+        type="outline"
+        titleStyle={styles.buttonTitleStyle}
+        title="My Bookmark"
+        icon={{
+          name: "bookmark-o",
+          type: "font-awesome",
+          color: "#000",
+          paddingHorizontal: 10,
+        }}
+        onPress={() => {
+          navigation.navigate("IndexedScreen", {
+            initialPage: bookmarkedPage,
+          });
+          console.log("Button pressed!");
+        }}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  View: { flex: 1, backgroundColor: "#fff" },
-  FlatListContainer: {
+  View: {
+    flex: 1,
+    backgroundColor: "#fff",
     marginVertical: 0,
     width: Dimensions.get("window").width,
     height: Dimensions.get("screen").length,

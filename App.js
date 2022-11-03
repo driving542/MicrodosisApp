@@ -185,7 +185,7 @@ const IndexNavigator = () => {
         name="IndexedScreen"
         component={IndexedScreen}
         options={({ navigation }) => ({
-          title: "Indexed",
+          title: "Autoscopia",
           headerLeft: () => (
             <Icon
               name="chevron-left"
