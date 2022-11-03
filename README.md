@@ -21,8 +21,17 @@ This project was built using React Native, and the following frameworks for its 
  Icons provided by FlatIcons by FreePik <a href="https://www.flaticon.com/free-icons/rhombus" title="rhombus icons">All icons created by Freepik - Flaticon</a>
 
 
-The poems themselves are written in Spanish, but for presentation purposes, the app's navigation, menus, and some screens, are in English. English version of the poems will come soon (I'll ask Jo to translate them). 
+The poems themselves are written in Spanish, but for presentation purposes, the app's navigation, menus, and some screens, are in English. English version of the poems will come soon (I'll ask for a translation). 
 
+
+
+
+![Screenshot 2022-11-03 at 16 50 08](https://user-images.githubusercontent.com/98180130/199787426-fa66e96c-24af-42f5-9269-62ce4dcc62a4.png)![Screenshot 2022-11-03 at 16 50 55](https://user-images.githubusercontent.com/98180130/199787548-66f61b29-ee3c-4a8f-bf81-df2480c2f290.png)
+
+
+
+
+https://user-images.githubusercontent.com/98180130/199788120-01ca224a-0353-4e58-8dce-d0ff2bd32626.mov
 
 
 
