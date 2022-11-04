@@ -32,7 +32,7 @@ const ContactScreen = () => {
         onPress={handlePress}
         style={style.buttonStyle}
         titleStyle={style.buttonTitleStyle}
-        type="outline"
+        type="clear"
         icon={<Icon name="instagram" type="font-awesome" style={style.icon} />}
       />
     );
@@ -50,7 +50,7 @@ const ContactScreen = () => {
               <Icon name="envelope-o" type="font-awesome" style={style.icon} />
             }
             buttonStyle={style.buttonStyle}
-            type="outline"
+            type="clear"
             titleStyle={style.buttonTitleStyle}
             onPress={() => sendMail()}
           />
