@@ -5,8 +5,8 @@ import * as Animatable from "react-native-animatable";
 const AboutScreen = () => {
   return (
     <CustomCard>
-      <View style={style.textContainer}>
-        <Text style={style.textName}>Hi, I'm Majo.</Text>
+      <View>
+        <Text style={style.title}>Hi, I'm Majo.</Text>
         <Text style={style.text}>
           I'm a poet based in Berlin. This app is the latest edition of my book
           of poems, a book that explores different media. Enjoy!
@@ -35,7 +35,7 @@ const style = StyleSheet.create({
     marginBottom: 20,
     fontSize: 15,
   },
-  textName: {
+  title: {
     fontFamily: "IBM-bold",
     paddingHorizontal: 40,
     marginBottom: 20,

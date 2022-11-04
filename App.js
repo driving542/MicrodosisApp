@@ -5,6 +5,7 @@ import FavoriteDisplayScreen from "./screens/FavoriteDisplayScreen";
 import IndexScreen from "./screens/IndexScreen";
 import IndexedScreen from "./screens/IndexedScreen";
 import AboutScreen from "./screens/AboutScreen";
+import ContactScreen from "./screens/ContactScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { View } from "react-native";
@@ -206,6 +207,43 @@ const IndexNavigator = () => {
   );
 };
 
+const ContactScreenNavigator = () => {
+  const Stack = createStackNavigator();
+  return (
+    <Stack.Navigator screenOptions={screenOptions}>
+      <Stack.Screen
+        name="Contact"
+        component={ContactScreen}
+        options={({ navigation }) => ({
+          headerLeft: () => (
+            <Icon
+              name="chevron-left"
+              type="font-awesome"
+              iconStyle={iconStyle}
+              onPress={() => navigation.toggleDrawer()}
+            />
+          ),
+        })}
+      />
+      {/* <Stack.Screen
+          name="IndexedScreen"
+          component={IndexedScreen}
+          options={({ navigation }) => ({
+            title: "Autoscopia",
+            headerLeft: () => (
+              <Icon
+                name="chevron-left"
+                type="font-awesome"
+                iconStyle={iconStyle}
+                onPress={() => navigation.goBack()}
+              />
+            ),
+          })}
+        /> */}
+    </Stack.Navigator>
+  );
+};
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     "IBM-bold": require("./assets/fonts/IBMPlexMono-SemiBold.ttf"),
@@ -257,6 +295,11 @@ export default function App() {
               name="About"
               component={AboutScreenNavigator}
               options={{ title: "About me" }}
+            />
+            <Drawer.Screen
+              name="Contact"
+              component={ContactScreenNavigator}
+              options={{ title: "Contact" }}
             />
           </Drawer.Navigator>
         </View>
