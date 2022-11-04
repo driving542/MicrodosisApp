@@ -18,14 +18,24 @@ const BookContent = ({ initialPage }) => {
     });
   }, [index]);
 
+  // const renderItem = ({ item }) => {
+  //   if (item.page === 1) {
+  //     return <IndexPage setIndex={setIndex} />;
+  //   } else if (item.esTitulo) {
+  //     return <TitlePageDisplay item={item} />;
+  //   } else {
+  //     return <PoemPageDisplay item={item} />;
+  //   }
+  // };
+
   const renderItem = ({ item }) => {
-    if (item.page === 1) {
-      return <IndexPage setIndex={setIndex} />;
-    } else if (item.esTitulo) {
-      return <TitlePageDisplay item={item} />;
-    } else {
-      return <PoemPageDisplay item={item} />;
-    }
+    return item.page === 1 ? (
+      <IndexPage setIndex={setIndex} />
+    ) : item.esTitulo ? (
+      <TitlePageDisplay item={item} />
+    ) : (
+      <PoemPageDisplay item={item} />
+    );
   };
 
   return (
