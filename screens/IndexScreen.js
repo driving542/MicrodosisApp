@@ -1,4 +1,4 @@
-import { View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet, Dimensions, Alert } from "react-native";
 import { Button } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
@@ -7,6 +7,19 @@ import { titles } from "../shared/PoemsSlice";
 const IndexScreen = () => {
   const navigation = useNavigation();
   const bookmarkedPage = useSelector((state) => state.bookmarkedPoem.ids);
+
+  const bookmarkButtonHandler = () => {
+    if (bookmarkedPage[0] === 0) {
+      Alert.alert(
+        "You have no bookmarks",
+        "Click on the bookmark icon to add a bookmark."
+      );
+    } else {
+      navigation.navigate("IndexedScreen", {
+        initialPage: bookmarkedPage,
+      });
+    }
+  };
 
   return (
     <View style={styles.view}>
@@ -65,11 +78,12 @@ const IndexScreen = () => {
           color: "#000",
           paddingHorizontal: 10,
         }}
-        onPress={() => {
-          navigation.navigate("IndexedScreen", {
-            initialPage: bookmarkedPage,
-          });
-        }}
+        onPress={bookmarkButtonHandler}
+        // onPress={() => {
+        //   navigation.navigate("IndexedScreen", {
+        //     initialPage: bookmarkedPage,
+        //   });
+        // }}
       />
     </View>
   );

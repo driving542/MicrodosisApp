@@ -1,10 +1,21 @@
-import { View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet, Dimensions, Alert } from "react-native";
 import { useSelector } from "react-redux";
 import { Button } from "react-native-elements";
 import { titles } from "../shared/PoemsSlice";
 
 const IndexPage = ({ setIndex }) => {
   const bookmarkedPage = useSelector((state) => state.bookmarkedPoem.ids);
+
+  const bookmarkButtonHandler = () => {
+    if (bookmarkedPage[0] === 0) {
+      Alert.alert(
+        "You have no bookmarks",
+        "Click on the bookmark icon to add a bookmark."
+      );
+    } else {
+      setIndex(bookmarkedPage);
+    }
+  };
 
   return (
     <View style={styles.flatListContainer}>
@@ -55,9 +66,7 @@ const IndexPage = ({ setIndex }) => {
           color: "#000",
           paddingHorizontal: 10,
         }}
-        onPress={() => {
-          setIndex(bookmarkedPage);
-        }}
+        onPress={bookmarkButtonHandler}
       />
     </View>
   );

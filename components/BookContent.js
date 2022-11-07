@@ -1,4 +1,4 @@
-import { View, FlatList, StyleSheet, Dimensions } from "react-native";
+import { View, FlatList, StyleSheet, Dimensions, Alert } from "react-native";
 import { POEMS } from "../shared/POEMS";
 import PoemPageDisplay from "./PoemPageDisplay";
 import TitlePageDisplay from "./TitlePageDisplay";
@@ -17,16 +17,6 @@ const BookContent = ({ initialPage }) => {
       animated: false,
     });
   }, [index]);
-
-  // const renderItem = ({ item }) => {
-  //   if (item.page === 1) {
-  //     return <IndexPage setIndex={setIndex} />;
-  //   } else if (item.esTitulo) {
-  //     return <TitlePageDisplay item={item} />;
-  //   } else {
-  //     return <PoemPageDisplay item={item} />;
-  //   }
-  // };
 
   const renderItem = ({ item }) => {
     return item.page === 1 ? (
