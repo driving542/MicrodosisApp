@@ -225,21 +225,6 @@ const ContactScreenNavigator = () => {
           ),
         })}
       />
-      {/* <Stack.Screen
-          name="IndexedScreen"
-          component={IndexedScreen}
-          options={({ navigation }) => ({
-            title: "Autoscopia",
-            headerLeft: () => (
-              <Icon
-                name="chevron-left"
-                type="font-awesome"
-                iconStyle={iconStyle}
-                onPress={() => navigation.goBack()}
-              />
-            ),
-          })}
-        /> */}
     </Stack.Navigator>
   );
 };
